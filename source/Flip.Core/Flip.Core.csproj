@@ -36,6 +36,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IConnection.cs" />
+    <Compile Include="IModel.cs" />
+    <Compile Include="IStreamFilter.cs" />
+    <Compile Include="IStreamStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
