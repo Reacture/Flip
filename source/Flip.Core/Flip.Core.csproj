@@ -36,6 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CompositeStreamFilter.cs" />
     <Compile Include="IConnection.cs" />
     <Compile Include="IModel.cs" />
     <Compile Include="IStreamFilter.cs" />
