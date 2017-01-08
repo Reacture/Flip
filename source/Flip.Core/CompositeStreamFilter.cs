@@ -45,11 +45,6 @@
                 throw new ArgumentNullException(nameof(newValue));
             }
 
-            if (lastValue == null)
-            {
-                throw new ArgumentNullException(nameof(lastValue));
-            }
-
             TModel value = newValue;
 
             for (int i = 0; i < _filters.Count; i++)

@@ -76,10 +76,16 @@ namespace Flip
         }
 
         [TestMethod]
-        public void Execute_has_guard_clauses()
+        public void Execute_has_guard_clause_for_newValue()
         {
-            var assertion = new GuardClauseAssertion(fixture);
-            assertion.Verify(typeof(CompositeStreamFilter<>).GetMethod("Execute"));
+            var sut = new CompositeStreamFilter<FakeModel>();
+            var newValue = default(FakeModel);
+            var lastValue = fixture.Create<FakeModel>();
+
+            Action action = () => sut.Execute(newValue, lastValue);
+
+            action.ShouldThrow<ArgumentNullException>()
+                .Where(x => x.ParamName == "newValue");
         }
 
         [TestMethod]

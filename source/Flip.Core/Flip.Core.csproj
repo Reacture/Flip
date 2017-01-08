@@ -43,6 +43,9 @@
     <Compile Include="IStreamStore.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StreamStore.cs" />
+    <Compile Include="WeakSubscription.cs" />
+    <Compile Include="WeakSubscription{T}.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
