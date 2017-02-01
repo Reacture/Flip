@@ -1,0 +1,9 @@
+version: 0.1.{build}
+configuration: Release
+before_build:
+- cmd: nuget restore source\Flip.sln
+build:
+  verbosity: minimal
+  project: source\Flip.sln
+test:
+  assemblies: '**\*.tests.dll'
